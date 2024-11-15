@@ -1,65 +1,67 @@
-/* Global Styles */
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
 body {
     background-color: #f0f0f8;
     font-family: 'Courier New', Courier, monospace;
     color: #333;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-/* Container */
+/* Container to hold sidebar and main content */
 .container {
+    display: flex;
     width: 80%;
-    margin: 0 auto;
-    border: 1px solid #333;
+    max-width: 1200px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Header */
-header {
+/* Sidebar styles */
+.sidebar {
+    width: 250px;
     background-color: #ffcc00;
     padding: 20px;
+    border-right: 2px solid #333;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+    color: #ff4500;
+}
+
+/* Main content styles */
+.content {
+    padding: 20px;
+    width: 100%;
 }
 
 header h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #ff4500;
     text-shadow: 2px 2px 0px #fff;
-}
-
-.header-img {
-    margin-top: 10px;
-}
-
-/* Navigation */
-nav ul {
-    background-color: #333;
-    padding: 10px;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-}
-
-nav ul li a:hover {
-    color: #ffcc00;
-}
-
-/* Sections */
-section {
-    padding: 20px;
 }
 
 section h2 {
@@ -68,19 +70,11 @@ section h2 {
     margin-bottom: 10px;
 }
 
-section img {
-    margin: 10px;
-    width: 100px;
-    height: auto;
+section {
+    margin-bottom: 30px;
 }
 
-/* Footer */
+/* Footer styles */
 footer {
-    background-color: #ffcc00;
-    padding: 20px;
-}
-
-footer a {
-    color: #333;
-    text-decoration: underline;
+    margin-top: 20px;
 }
